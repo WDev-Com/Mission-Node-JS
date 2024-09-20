@@ -1,0 +1,83 @@
+[{
+  "_id": {
+    "$oid": "66e7d6e31dd4f9176d8ca38c"
+  },
+  "name": "Chocolate Cake",
+  "price": 5.99,
+  "taste": "Sweet",
+  "is_drink": false,
+  "ingredients": [
+    "Flour",
+    "Sugar",
+    "Cocoa Powder",
+    "Eggs"
+  ],
+  "num_sales": 150,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e7d6ea1dd4f9176d8ca38e"
+  },
+  "name": "Spicy Chicken Wings",
+  "price": 8.49,
+  "taste": "Spicy",
+  "is_drink": false,
+  "ingredients": [
+    "Chicken",
+    "Hot Sauce",
+    "Garlic",
+    "Butter"
+  ],
+  "num_sales": 90,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e7d6f01dd4f9176d8ca390"
+  },
+  "name": "Lemonade",
+  "price": 2.99,
+  "taste": "Sour",
+  "is_drink": true,
+  "ingredients": [
+    "Water",
+    "Lemon",
+    "Sugar"
+  ],
+  "num_sales": 300,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e7d6f51dd4f9176d8ca392"
+  },
+  "name": "Mango Smoothie",
+  "price": 4.99,
+  "taste": "Sweet",
+  "is_drink": true,
+  "ingredients": [
+    "Mango",
+    "Milk",
+    "Honey"
+  ],
+  "num_sales": 200,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e7d6f91dd4f9176d8ca394"
+  },
+  "name": "Hot and Sour Soup",
+  "price": 6.99,
+  "taste": "Sour",
+  "is_drink": false,
+  "ingredients": [
+    "Mushrooms",
+    "Tofu",
+    "Vinegar",
+    "Pepper"
+  ],
+  "num_sales": 120,
+  "__v": 0
+}]

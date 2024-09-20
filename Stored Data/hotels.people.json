@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "66e7d10ed0fa1316ef0f16d5"
+  },
+  "name": "Ram",
+  "age": 28,
+  "work": "waiter",
+  "mobile": "123-456-7890",
+  "email": "ram@example.com",
+  "address": "123 Main St, City",
+  "salary": 60000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e7d1a1d0fa1316ef0f16dd"
+  },
+  "name": "Sham",
+  "age": 28,
+  "work": "chef",
+  "mobile": "123-456-7890",
+  "email": "sham@example.com",
+  "address": "123 Main St, City",
+  "salary": 60000,
+  "__v": 0
+}]
