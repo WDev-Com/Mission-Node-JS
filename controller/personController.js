@@ -1,5 +1,8 @@
 const Person = require("../models/Person");
 const mongoose = require("mongoose");
+//JWT Middleware
+const { jwtAuthMiddleware, generateToken } = require("../JWT/jwt");
+const { use } = require("passport");
 exports.createPerson = async (req, res) => {
   try {
     let data = req.body;
@@ -9,11 +12,41 @@ exports.createPerson = async (req, res) => {
 
     // save the new person document to database
     let savedPerson = await newPerson.save();
-    console.log("Line No 13 Data Saved");
-    res.status(200).send(savedPerson);
+    let payload = {
+      id: savedPerson.id,
+      username: savedPerson.username,
+    };
+    const token = generateToken(payload);
+    console.log("Line No 13 Data Saved", token);
+    res.status(200).json({ savedPerson, token });
   } catch (err) {
     console.log("Line No 16 Error : ", err);
     res.status(500).send(JSON.stringify({ error: "Internal Server Error" }));
+  }
+};
+
+exports.loginUser = async (req, res) => {
+  try {
+    //Extract username and password from request body
+    const { username, password } = req.body;
+    //Find the user by username
+    const user = await Person.findOne({ username: username });
+
+    // Id other does not exist or password does not match, return error
+    if (!user || !(await user.comparePassword(password))) {
+      return res.status(401).json({ error: "Invalid Username or Password" });
+    }
+    //genrate Token
+    let paylod = {
+      id: user.id,
+      username: user.username,
+    };
+    let token = generateToken(paylod);
+    //return token as response
+    res.json({ token });
+  } catch (err) {
+    console.log("Line No 48 Error : ", err);
+    res.status(500).json({ error: err });
   }
 };
 

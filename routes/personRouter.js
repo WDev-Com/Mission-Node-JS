@@ -5,11 +5,13 @@ const {
   createPerson,
   deletePerson,
   updatePerson,
+  loginUser,
 } = require("../controller/personController");
 
 router
   .get("/", getPerson)
-  .post("/", createPerson)
+  .post("/signup", createPerson)
+  .post("/login", loginUser)
   .delete("/:id", deletePerson)
   .patch("/:id", updatePerson);
 
